@@ -13,12 +13,15 @@ func main() {
 
 	// Custom Type
 	card5 := newType()
-	card6 := deck{"UNO Reverse", "UNO Skip"}
 
-	card6.print()
+	deck := deck{"UNO Reverse", "UNO Skip"}
+	deck.print()
+	first_hand, second_hand := deck.deal(1)
 
 	fruitSlice := newSliceTut()
 
+	fmt.Println(first_hand)
+	fmt.Println(second_hand)
 	fmt.Println(fruitSlice)
 	fmt.Println(anotherFilefunction())
 	fmt.Println(card5)
@@ -72,4 +75,10 @@ func (d deck) print() deck {
 		fmt.Println(i, card)
 	}
 	return d
+}
+
+// Multiple Return Values func declaration
+
+func (d deck) deal(handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
 }
