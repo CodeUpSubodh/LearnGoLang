@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 func main() {
@@ -19,6 +20,9 @@ func main() {
 	first_hand, second_hand := deck.deal(1)
 
 	fruitSlice := newSliceTut()
+
+	//Byte Conversion
+	byteconversion()
 
 	fmt.Println(first_hand)
 	fmt.Println(second_hand)
@@ -81,4 +85,17 @@ func (d deck) print() deck {
 
 func (d deck) deal(handSize int) (deck, deck) {
 	return d[:handSize], d[handSize:]
+}
+
+// Byte Slice
+func byteconversion() {
+	byte_value := []byte("Hi There")
+	fmt.Println(byte_value)
+	//Customer Type Conversion
+	deck := deck{"UNO Reverse", "UNO Skip"}
+	deckToSlice := []string(deck)
+	fmt.Println(deckToSlice)
+	sliceToString := strings.Join(deckToSlice, ",")
+	fmt.Println((sliceToString))
+
 }
