@@ -11,7 +11,7 @@ func main() {
 	for _, value := range intslice {
 		if value%2 == 0 {
 			fmt.Println("Even", value, "Value")
-			fmt.Printf("Even %v Value\n", value)
+			fmt.Printf("Even %v Value\n", value) //Same Work
 
 		} else {
 			fmt.Println("Odd Value", value)
