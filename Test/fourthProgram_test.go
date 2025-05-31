@@ -1,14 +1,18 @@
 package main
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 // before writing any test case in go run command go mod init {directory name like LearnGoLoand}- This will create a file of go.mod after which you can execute go test
 func TestDivide(t *testing.T) {
-	a, b := 2.4, 5.2
-	value := divide(a, b)
-
-	if value == nil {
-		t.Errorf("Float Value Expected")
+	// a, b := 2.4, 5.2 //Success Case
+	a, b := 0.0, 0.0 //Failure Case
+	value, err := divide(a, b)
+	fmt.Println(value)
+	if err != nil {
+		t.Errorf("0 cannot be the denominator")
 
 	}
 
