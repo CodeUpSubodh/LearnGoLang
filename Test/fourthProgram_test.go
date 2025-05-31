@@ -12,7 +12,7 @@ func TestDivide(t *testing.T) {
 	value, err := divide(a, b)
 	fmt.Println(value)
 	if err != nil {
-		t.Errorf("0 cannot be the denominator")
+		t.Errorf("0 cannot be the denominator %v", err) //to make use of dynamic value we use %v in go
 
 	}
 
