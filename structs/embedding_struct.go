@@ -28,7 +28,8 @@ func main() {
 	}
 
 	// fmt.Printf("%+v", jim)
-	jim.updateName("jimmy")
+	jimPointer := &jim //Pointers in Go to Update a struct value
+	jimPointer.updateName("jimmy")
 	jim.print()
 
 }
@@ -39,6 +40,6 @@ func (p person) print() {
 	fmt.Printf("%+v", p)
 }
 
-func (p person) updateName(newFirstName string) {
-	p.firstName = newFirstName
+func (pointerToPerson *person) updateName(newFirstName string) {
+	(*pointerToPerson).firstName = newFirstName //Pointers in Go to Update a struct value
 }
