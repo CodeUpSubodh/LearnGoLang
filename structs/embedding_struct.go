@@ -27,6 +27,18 @@ func main() {
 		},
 	}
 
-	fmt.Printf("%+v", jim)
+	// fmt.Printf("%+v", jim)
+	jim.updateName("jimmy")
+	jim.print()
 
+}
+
+// Reciver funcation and function in structs
+
+func (p person) print() {
+	fmt.Printf("%+v", p)
+}
+
+func (p person) updateName(newFirstName string) {
+	p.firstName = newFirstName
 }
