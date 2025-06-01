@@ -29,6 +29,7 @@ func main() {
 
 	// fmt.Printf("%+v", jim)
 	jimPointer := &jim //Pointers in Go to Update a struct value
+	// & is used to assgin memory address of a variable
 	jimPointer.updateName("jimmy")
 	jim.print()
 
@@ -41,5 +42,6 @@ func (p person) print() {
 }
 
 func (pointerToPerson *person) updateName(newFirstName string) {
+	// * is used to assgin value for a memory address
 	(*pointerToPerson).firstName = newFirstName //Pointers in Go to Update a struct value
 }
