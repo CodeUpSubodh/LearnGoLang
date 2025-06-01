@@ -8,17 +8,26 @@ func main() {
 
 	// colors := make(map[string]string) // allocates memory
 	colors := make(map[int]string)
-	// colors := map[string]string{
-	// 	"red":   "#ff000",
-	// 	"green": "#4bf745",
-	// }
 
 	colors[10] = "#fffff"
 
 	// Built in function
 
 	delete(colors, 10)
-
 	fmt.Println(colors)
+	// Iterating over a map
+	coloring := map[string]string{
+		"red":   "#ff000",
+		"green": "#4bf745",
+	}
+	printMap(coloring)
+
+}
+
+func printMap(c map[string]string) {
+	for color, hex := range c {
+		fmt.Println("Hex Code for", color, "is", hex)
+
+	}
 
 }
