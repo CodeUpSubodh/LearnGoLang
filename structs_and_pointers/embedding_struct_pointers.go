@@ -33,6 +33,9 @@ func main() {
 	jimPointer.updateName("jimmy")
 	// jim.updateName("jimmy") //This will also work but the function should have reciver type as pointer
 	jim.print()
+	// This case of creating a copy and functions can only modifies the copies and not the original values
+	// without pointer is for integer, string, float and struct but in case of slices pointers are not
+	// needed to change a value using a function
 
 }
 
