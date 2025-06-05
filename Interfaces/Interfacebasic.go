@@ -2,10 +2,10 @@ package main
 
 import "fmt"
 
-type bot interface {
+type bot interface { //Interface Tyep - For which we can not create value directly
 	getGreeting() string
 }
-type englishBot struct{}
+type englishBot struct{} //Concrete Type - For which we can create value directly
 type spanishBot struct{}
 
 func main() {
