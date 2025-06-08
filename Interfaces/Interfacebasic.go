@@ -37,3 +37,5 @@ func (spanishBot) getGreeting() string {
 	//Custom Logic
 	return "Holla!"
 }
+
+// There can be interface which can have other interface
