@@ -19,3 +19,5 @@ func main() {
 	fmt.Printf("%+v", subodh) //{firstName:Subodh lastName:Srivastava}%
 
 }
+
+// If attribute in struct has a value of type interface then it means that that atrribute's values shouls satify the functions
