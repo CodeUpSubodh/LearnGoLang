@@ -16,14 +16,12 @@ type shapes interface {
 }
 
 func (s square) area() float64 {
-	var area float64
-	area = s.sideLength * s.sideLength
+	area := s.sideLength * s.sideLength
 	return area
 }
 
 func (t triangle) area() float64 {
-	var area float64
-	area = t.base * t.hieght * 1 / 2
+	area := t.base * t.hieght * 1 / 2
 	return area
 }
 
