@@ -21,8 +21,11 @@ func main() {
 	// 	fmt.Println(<-c)
 	// }
 
-	for {
-		go checkLink(<-c, c) //Repeting Rotuines
+	// for {
+	// 	go checkLink(<-c, c) //Repeting Rotuines
+	// }
+	for l := range c {
+		go checkLink(l, c) //Repeting Rotuines
 	}
 }
 
