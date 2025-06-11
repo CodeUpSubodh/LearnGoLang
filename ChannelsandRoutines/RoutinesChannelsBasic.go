@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"time"
 )
 
 func main() {
@@ -25,7 +26,8 @@ func main() {
 	// 	go checkLink(<-c, c) //Repeting Rotuines
 	// }
 	for l := range c {
-		go checkLink(l, c) //Repeting Rotuines
+		time.Sleep(5 * time.Second) // Sleep for 5 seconds
+		go checkLink(l, c)          //Repeting Rotuines
 	}
 }
 
