@@ -17,8 +17,12 @@ func main() {
 	// fmt.Println(<-c) //Reciving a value through channel even after this implementaion we will recive data from only one go routine
 	// fmt.Println(<-c)
 
-	for i := 0; i < len(links); i++ {
-		fmt.Println(<-c)
+	// for i := 0; i < len(links); i++ {
+	// 	fmt.Println(<-c)
+	// }
+
+	for {
+		go checkLink(<-c, c) //Repeting Rotuines
 	}
 }
 
@@ -29,5 +33,6 @@ func checkLink(link string, c chan string) {
 		c <- "Might be Down" //Sending data through channel
 	}
 	fmt.Println(link, "is up!")
-	c <- "Its Up"
+	// c <- "Its Up"
+	c <- link
 }
