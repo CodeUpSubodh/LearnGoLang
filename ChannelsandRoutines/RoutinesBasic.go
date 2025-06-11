@@ -8,7 +8,7 @@ import (
 func main() {
 	links := []string{"http://google.com", "http://facebook.com", "http://stackoverflow.com", "http://golang.org", "http://amazon.com"}
 	for _, link := range links {
-		checkLink(link) //There is delay at the time of execution
+		checkLink(link) //There is delay at the time of execution because go is waiting for response and then proceeding to other execution process
 
 	}
 
