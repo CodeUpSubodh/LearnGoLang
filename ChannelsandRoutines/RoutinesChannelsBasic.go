@@ -26,8 +26,12 @@ func main() {
 	// 	go checkLink(<-c, c) //Repeting Rotuines
 	// }
 	for l := range c {
-		time.Sleep(5 * time.Second) // Sleep for 5 seconds
-		go checkLink(l, c)          //Repeting Rotuines
+		// time.Sleep(5 * time.Second) // Sleep for 5 seconds
+		// go checkLink(l, c)          //Repeting Rotuines
+		go func() {
+			time.Sleep(5 * time.Second)
+			checkLink(l, c)
+		}() //These are function literal which we also know as Lambda Functions in other languages
 	}
 }
 
